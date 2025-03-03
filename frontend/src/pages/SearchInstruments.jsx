@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../css/SearchInstruments.css'
+//import axios from "axios";
 
 //array of instruments
 const instruments = [
@@ -10,7 +10,7 @@ const instruments = [
     "Tuba",
     "Trumpet",
     "Baritone/Euphonium",
-    "Trombone",
+    "Trumbone",
     "French Horn",
     "Saxophone-Alto",
     "Saxophone-Tenor",
@@ -19,7 +19,7 @@ const instruments = [
     "Percussion"
 ];
 
-function SearchBar() {
+export default function SearchBar() {
     const [query, setQuery] = useState("");
 
     const filteredInstruments = instruments.filter((instrument) => instrument.toLowerCase().includes(query.toLowerCase()));
@@ -33,7 +33,6 @@ return(
         onChange={(e) => setQuery(e.target.value)}
         className="w-full p-2 border rounded-lg shadow-md"
         />
-        {query && (
         <ul className="mt-2 bg-white shadow-md rounded-lg">
             {filteredInstruments.length > 0 ? (
                 filteredInstruments.map((instrument, index) => (
@@ -42,13 +41,11 @@ return(
                     </li>
                 ))
             ) : (
-                <li className="p-2 text-grey-500">No instruments found</li>
+                <li className="p-2 text-gray-500">No instruments found</li>
             )}
             </ul>
-        )}
         </div>    
 );
 
 }
 
-export default SearchBar;
