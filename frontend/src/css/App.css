@@ -6,16 +6,10 @@
   text-align: center;
 }
 
-.home-card {
-  display:inline-flex;
-  padding:1rem;
-  flex-direction:row;
-  position:relative;
-  border-radius: 8px;
-  border: 3px solid rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  margin:100px 10px 4px 10px;
+body {
+  background-color: #D1B1C8;
 }
+
 
 .page-info {
   font-size: 150%;
@@ -62,14 +56,11 @@
 }
 
 h3 {
+  color:black;
   font-size: xx-large;
 }
 
-.functionality-card p {
-  color: #FF10F0;
+p{
+  color:black;
+  font-size: xx-large;
 }
-.functionality-card p:hover {
-  color:blue;
-}
-
-p{font-size: x-large;}
