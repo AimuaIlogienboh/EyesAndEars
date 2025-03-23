@@ -13,7 +13,7 @@ const Signup = () => {
         try {
             await axios.post('http://localhost:5001/api/signup', { name, email, mobile_number, password });
             alert('Signup successful! Check your email for the OTP.');
-            //navigate yo otp verifictaion page
+            //navigate to otp verifictaion page
             Navigate('/OtpVerification');
         } catch (error) {
             alert('Error during signup');
